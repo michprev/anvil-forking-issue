@@ -1,0 +1,19 @@
+[compiler.solc]
+ignore_paths = ["node_modules", ".woke-build", "venv", "lib"]
+include_paths = ["node_modules"]
+
+[detectors]
+exclude = []
+ignore_paths = ["node_modules", ".woke-build", "venv", "lib"]
+
+[testing]
+cmd = "anvil"
+
+[testing.anvil]
+cmd_args = "--silent -f https://eth-mainnet.g.alchemy.com/v2/API_KEY --fork-block-number 17386454 --fork-chain-id 1"
+
+[testing.ganache]
+cmd_args = "-k istanbul -q"
+
+[testing.hardhat]
+cmd_args = ""
